@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dogueria Winchester - Cardápio</title>
+  <link rel="stylesheet" href="css/cardapio.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Dogueria Winchester</div>
+    <nav>
+      <button onclick="window.location.href='index.html'">Página Inicial</button>
+      <button onclick="window.location.href='carrinho.html'">Carrinho</button>
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <div class="sidebar">
+      <button onclick="scrollToSection('lanches')">Lanches</button>
+      <button onclick="scrollToSection('bebidas')">Bebidas</button>
+      <button onclick="scrollToSection('porcoes')">Porções</button>
+    </div>
+    
+    <div class="menu">
+      <!-- SEÇÃO DE LANCHES -->
+      <div class="section" id="lanches">
+        <h2>Lanches</h2>
+        
+        <div class="product">
+          <h3>Cachorro-Quente Tradicional</h3>
+          <p>Pão, salsicha, molho de tomate, batata palha.</p>
+          <p>R$ 10,00</p>
+          <button class="add-button" onclick="addToCart('Cachorro-Quente Tradicional', 10.00)">Adicionar</button>
+          <button class="remove-button" onclick="removeFromCart('Cachorro-Quente Tradicional')">Remover</button>
+        </div>
+        
+        <div class="product">
+          <h3>Cachorro-Quente com Queijo</h3>
+          <p>Pão, salsicha, queijo derretido, molho especial.</p>
+          <p>R$ 12,00</p>
+          <button class="add-button" onclick="addToCart('Cachorro-Quente com Queijo', 12.00)">Adicionar</button>
+          <button class="remove-button" onclick="removeFromCart('Cachorro-Quente com Queijo')">Remover</button>
+        </div>
+        
+        <div class="product">
+          <h3>Cachorro-Quente Picante</h3>
+          <p>Pão, salsicha, molho picante, jalapeños.</p>
+          <p>R$ 13,00</p>
+          <button class="add-button" onclick="addToCart('Cachorro-Quente Picante', 13.00)">Adicionar</button>
+          <button class="remove-button" onclick="removeFromCart('Cachorro-Quente Picante')">Remover</button>
+        </div>
+        
+        <div class="product">
+          <h3>Cachorro-Quente Vegano</h3>
+          <p>Pão integral, salsicha vegetal, vegetais frescos.</p>
+          <p>R$ 14,00</p>
+          <button class="add-button" onclick="addToCart('Cachorro-Quente Vegano', 14.00)">Adicionar</button>
+          <button class="remove-button" onclick="removeFromCart('Cachorro-Quente Vegano')">Remover</button>
+        </div>
+      </div>
+
+      <!-- SEÇÃO DE BEBIDAS -->
+      <div class="section" id="bebidas">
+        <h2>Bebidas</h2>
+        
+        <div class="product">
+          <h3>Refrigerante Lata</h3>
+          <p>350ml - Coca-Cola, Guaraná, Fanta.</p>
+          <p>R$ 5,00</p>
+          <button class="add-button" onclick="addToCart('Refrigerante Lata', 5.00)">Adicionar</button>
+          <button class="remove-button" onclick="removeFromCart('Refrigerante Lata')">Remover</button>
+        </div>
+        
+        <div class="product">
+          <h3>Suco Natural</h3>
+          <p>300ml - Laranja, Limão, Maracujá.</p>
+          <p>R$ 6,00</p>
+          <button class="add-button" onclick="addToCart('Suco Natural', 6.00)">Adicionar</button>
+          <button class="remove-button" onclick="removeFromCart('Suco Natural')">Remover</button>
+        </div>
+        
+        <div class="product">
+          <h3>Água Mineral</h3>
+          <p>500ml - Com ou sem gás.</p>
+          <p>R$ 3,00</p>
+          <button class="add-button" onclick="addToCart('Água Mineral', 3.00)">Adicionar</button>
+          <button class="remove-button" onclick="removeFromCart('Água Mineral')">Remover</button>
+        </div>
+        
+        <div class="product">
+          <h3>Chá Gelado</h3>
+          <p>300ml - Pêssego ou Limão.</p>
+          <p>R$ 4,00</p>
+          <button class="add-button" onclick="addToCart('Chá Gelado', 4.00)">Adicionar</button>
+          <button class="remove-button" onclick="removeFromCart('Chá Gelado')">Remover</button>
+        </div>
+      </div>
+
+      <!-- SEÇÃO DE PORÇÕES -->
+      <div class="section" id="porcoes">
+        <h2>Porções</h2>
+        
+        <div class="product">
+          <h3>Batata Frita</h3>
+          <p>Porção média de batatas fritas crocantes.</p>
+          <p>R$ 8,00</p>
+          <button class="add-button" onclick="addToCart('Batata Frita', 8.00)">Adicionar</button>
+          <button class="remove-button" onclick="removeFromCart('Batata Frita')">Remover</button>
+        </div>
+        
+        <div class="product">
+          <h3>Onion Rings</h3>
+          <p>Anéis de cebola empanados e fritos.</p>
+          <p>R$ 9,00</p>
+          <button class="add-button" onclick="addToCart('Onion Rings', 9.00)">Adicionar</button>
+          <button class="remove-button" onclick="removeFromCart('Onion Rings')">Remover</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Dogueria Winchester - Todos os direitos reservados</p>
+  </footer>
+
+  <div id="notification" class="notification"></div>
+
+  <script src="js/cardapio.js"></script>
+</body>
+</html>

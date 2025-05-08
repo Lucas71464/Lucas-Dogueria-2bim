@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho - Dogueria Winchester</title>
+  <link rel="stylesheet" href="css/carrinho.css">
+</head>
+<body>
+  <header>
+    <h1>Dogueria Winchester</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="carrinho.html">Carrinho</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Carrinho de Compras</h2>
+    <div id="cart-container">
+      <!-- Itens serão inseridos pelo JavaScript -->
+    </div>
+    <div class="total" id="total-price">Total: R$ 0.00</div>
+    <button class="checkout-button" onclick="checkout()">Finalizar Compra</button>
+  </main>
+
+  <footer>
+    <p>📞 Telefone: (00) 12345-6789</p>
+    <p>📧 Email: contato@dogueriawinchester.com</p>
+    <p>📸 Instagram: @dogueriawinchester</p>
+    <p>&copy; 2025 Dogueria Winchester</p>
+  </footer>
+
+  <div id="notification" class="notification"></div>
+
+  <script src="js/carrinho.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagamento - Dogueria Winchester</title>
+  <link rel="stylesheet" href="css/pagamento.css">
+</head>
+<body>
+  <header>
+    <h1>Dogueria Winchester</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="carrinho.html">Carrinho</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Escolha o Método de Pagamento</h2>
+    
+    <div class="payment-options">
+      <button onclick="selectPayment('cartao')" id="btn-cartao">Cartão</button>
+      <button onclick="selectPayment('dinheiro')" id="btn-dinheiro">Dinheiro</button>
+      <button onclick="selectPayment('pix')" id="btn-pix">Pix</button>
+    </div>
+
+    <!-- Formulário de Cartão -->
+    <div class="payment-form" id="form-cartao">
+      <h3>Pagamento com Cartão</h3>
+      <input type="text" placeholder="Número do Cartão" required>
+      <input type="text" placeholder="Nome no Cartão" required>
+      <input type="text" placeholder="Validade (MM/AA)" required>
+      <input type="text" placeholder="CVV" required>
+      <button class="confirm-button" onclick="processPayment()">Confirmar Pagamento</button>
+    </div>
+
+    <!-- Formulário de Dinheiro -->
+    <div class="payment-form" id="form-dinheiro">
+      <h3>Pagamento em Dinheiro</h3>
+      <input type="number" placeholder="Troco para quanto?" min="0" step="0.01" required>
+      <button class="confirm-button" onclick="processPayment()">Confirmar</button>
+    </div>
+
+    <!-- Formulário de Pix -->
+    <div class="payment-form" id="form-pix">
+      <h3>Pagamento via Pix</h3>
+      <p>Escaneie o código QR abaixo ou use a chave:</p>
+      <div class="pix-code">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=PixDogueriaWinchester" alt="QR Code Pix">
+      </div>
+      <p class="pix-key">Chave Pix: contato@dogueriawinchester.com</p>
+      <button class="confirm-button" onclick="processPayment()">Já paguei</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>📞 Telefone: (00) 12345-6789</p>
+    <p>📧 Email: contato@dogueriawinchester.com</p>
+    <p>📸 Instagram: @dogueriawinchester</p>
+    <p>&copy; 2025 Dogueria Winchester</p>
+  </footer>
+
+  <script src="js/pagamento.js"></script>
+</body>
+</html>

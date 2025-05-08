@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: #c40000;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  nav button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  nav button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Seção de Promoções */
+  .promo-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    background-color: #f4f4f4;
+    flex: 1;
+  }
+  
+  .promo {
+    width: 45%;
+  }
+  
+  .promo img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* Rodapé */
+  footer {
+    background-color: #c40000;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+  }
+  
+  footer p {
+    margin: 5px 0;
+  }
