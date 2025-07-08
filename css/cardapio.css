@@ -9,6 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-top: 70px;
 }
 
 /* CABEÇALHO */
@@ -19,6 +20,11 @@ header {
   align-items: center;
   justify-content: space-between;
   color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 200;
 }
 
 .logo {
@@ -44,6 +50,7 @@ nav button:hover {
 .main-content {
   display: flex;
   flex: 1;
+  padding-bottom: 140px;
 }
 
 .sidebar {
@@ -85,35 +92,64 @@ nav button:hover {
 
 /* PRODUTOS */
 .product {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
-  margin-bottom: 15px;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: linear-gradient(135deg, #fffbe6 70%, #ffe58f 100%);
+  border: 1.5px solid #ffe58f;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px #ffe58f55;
+  padding: 22px 20px 16px 20px;
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.2s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.product:hover {
+  box-shadow: 0 8px 32px #c4000033;
+  transform: translateY(-3px) scale(1.02);
 }
 
 .product h3 {
-  margin-bottom: 8px;
   color: #c40000;
+  margin-bottom: 8px;
+  font-size: 1.25em;
+  font-weight: bold;
+  letter-spacing: 0.5px;
 }
 
 .product p {
   margin-bottom: 8px;
-  color: #555;
+  color: #444;
+  font-size: 1.05em;
 }
 
-.product button {
-  margin-right: 8px;
-  padding: 8px 12px;
-  border: none;
+.product button,
+.product button:only-child {
+  background-color: transparent;
+  border: 1.5px solid #c40000;
+  color: #c40000;
+  padding: 10px 22px;
   border-radius: 4px;
+  font-size: 1.08em;
   cursor: pointer;
-  transition: opacity 0.3s;
+  margin-top: 10px;
+  align-self: flex-end;
+  font-weight: bold;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+  margin-left: 10px;
 }
 
-.product button:hover {
-  opacity: 0.9;
+.product button:hover,
+.product button:only-child:hover {
+  background-color: #c40000;
+  color: white;
+}
+
+.product button:first-child {
+  margin-left: 0;
 }
 
 .add-button {
@@ -126,18 +162,77 @@ nav button:hover {
   color: white;
 }
 
+.produto {
+  background: linear-gradient(135deg, #fffbe6 70%, #ffe58f 100%);
+  border: 1.5px solid #ffe58f;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px #ffe58f55;
+  padding: 18px 20px 16px 20px;
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+  gap: 24px;
+}
+
+.produto-img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #ffe58f44;
+  background: #fff;
+  border: 1px solid #ffe58f;
+}
+
+.produto-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .categoria-produto {
+    padding: 12px 4vw;
+  }
+  .produto {
+    padding: 12px 8px;
+  }
+  .produto {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .produto-img {
+    width: 90px;
+    height: 90px;
+  }
+}
+
 /* RODAPÉ (ESTILO ADICIONADO) */
 footer {
   background-color: #c40000;
   color: white;
   text-align: center;
   padding: 20px 10px;
-  margin-top: auto;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  z-index: 100;
 }
 
 footer p {
   margin: 5px 0;
   font-size: 0.9em;
+}
+
+main {
+  padding-bottom: 140px;
 }
 
 /* NOTIFICAÇÕES */
@@ -165,4 +260,19 @@ footer p {
 
 .notification.removed {
   background-color: #dc3545;
+}
+
+/* EFEITO ARCO-ÍRIS */
+.rainbow-text-effect {
+  background: linear-gradient(90deg, #ff0000, #ff9900, #ffee00, #33ff00, #00ffee, #0066ff, #cc00ff, #ff0000 60%);
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: rainbow-move 3s linear infinite;
+}
+
+@keyframes rainbow-move {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }

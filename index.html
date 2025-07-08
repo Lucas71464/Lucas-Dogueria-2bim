@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,32 +10,52 @@
   <!-- Cabeçalho -->
   <header>
     <div class="logo">Dogueria Winchester</div>
-    <nav>
+    <nav id="main-nav">
       <button onclick="window.location.href='index.html'">Página Inicial</button>
       <button onclick="window.location.href='cardapio.html'">Cardápio</button>
+      <button id="login-btn" onclick="window.location.href='login.html'">Login</button>
+      <button id="cadastro-btn" onclick="window.location.href='cadastro.html'">Cadastro</button> <!-- NOVO BOTÃO -->
     </nav>
   </header>
 
-  <!-- Seção de Promoções -->
+  <!-- Seção de Promoções e Sobre Nós -->
   <section class="promo-section">
-    <div class="promo">
-      <a href="cardapio.html">
-        <img src="img/hot-dog-classico-capa-730x480.jpeg" alt="Promoção Cachorro-Quente 1">
-      </a>
+    <div class="sobre-nos">
+      <h2>Sobre Nós</h2>
+      <p>Bem-vindo à Dogueria Winchester!<br><br>
+      Somos apaixonados por hot dogs e lanches de qualidade. Aqui você encontra ingredientes frescos, receitas exclusivas e um atendimento especial para tornar sua experiência deliciosa e inesquecível.<br><br>
+      Experimente nossos clássicos, opções veganas, combos e porções, tudo preparado com carinho para você e sua família!</p>
     </div>
-    <div class="promo">
-      <a href="cardapio.html">
-        <img src="img/BDQY6KP3BFBERM5DKBHXUUELZ4.avif" alt="Promoção Cachorro-Quente 2">
-      </a>
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-track">
+          <div class="promo" data-lanche="tradicional">
+            <a href="cardapio.html#Cachorro-Quente-Tradicional" class="promo-link" data-lanche-destino="Cachorro-Quente Tradicional">
+              <img src="img/hot-dog-classico-capa-730x480.jpeg" alt="Promoção Cachorro-Quente Tradicional">
+            </a>
+          </div>
+          <div class="promo" data-lanche="vegano">
+            <a href="cardapio.html#Cachorro-Quente-Vegano" class="promo-link" data-lanche-destino="Cachorro-Quente Vegano">
+              <img src="img/cachorro-quente-maneiras-de-preparar.jpg" alt="Promoção Cachorro-Quente Vegano">
+            </a>
+          </div>
+        </div>
+        <button class="carousel-arrow left" aria-label="Anterior">&#8592;</button>
+        <button class="carousel-arrow right" aria-label="Próxima">&#8594;</button>
+        <div class="carousel-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Rodapé -->
   <footer>
-    <p>📞 Telefone: (00) 12345-6789</p>
-    <p>📧 Email: contato@dogueriawinchester.com</p>
-    <p>📸 Instagram: @dogueriawinchester</p>
     <p>&copy; 2025 Dogueria Winchester. Todos os direitos reservados.</p>
   </footer>
+
+  <script src="js/login-info.js"></script>
+  <script src="js/index-carousel.js"></script>
 </body>
 </html>

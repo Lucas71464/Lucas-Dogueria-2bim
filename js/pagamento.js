@@ -1,3 +1,5 @@
+// Conteúdo completo do arquivo MultipleFiles/pagamento.js
+
 function selectPayment(method) {
     // Esconde todos os formulários
     document.querySelectorAll('.payment-form').forEach(form => {
@@ -15,12 +17,40 @@ function selectPayment(method) {
   }
   
   function processPayment() {
-    alert('Pagamento processado com sucesso! Obrigado pelo seu pedido.');
-    localStorage.removeItem('cart'); // Limpa o carrinho
-    window.location.href = 'index.html'; // Volta para a página inicial
+    let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
+    if (cart.length === 0) {
+      alert('Seu carrinho está vazio!');
+      return;
+    }
+    fetch('http://localhost:3000/pedidos', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ itens: cart })
+    })
+      .then(response => response.json())
+      .then(result => {
+        if (result.success) {
+          alert('Pagamento processado com sucesso! Obrigado pelo seu pedido.');
+          sessionStorage.removeItem('cart');
+          window.location.href = 'index.html';
+        } else {
+          alert(result.message || 'Erro ao processar pagamento.');
+        }
+      })
+      .catch(() => {
+        alert('Erro de conexão com o servidor!');
+      });
   }
   
   // Inicializa com o primeiro método selecionado
   document.addEventListener('DOMContentLoaded', () => {
     selectPayment('cartao');
+  });
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const userStr = sessionStorage.getItem('currentUser');
+    if (!userStr) {
+      alert('Você precisa estar logado para acessar o pagamento!');
+      window.location.href = 'login.html';
+    }
   });

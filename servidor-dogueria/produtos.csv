@@ -1,0 +1,9 @@
+id,nome,preco,descricao,imagem,secao
+1,Cachorro-Quente Tradicional,10.00,"Pão, salsicha, molho de tomate, batata palha.",img/hot-dog-classico-capa-730x480.jpeg,Lanches
+2,Refrigerante Lata,5.00,"350ml - Coca-Cola, Guaraná, Fanta.",https://alloydeliveryimages.s3.sa-east-1.amazonaws.com/item_images/2649/646f9a4fbfa8flstpb.webp,Bebidas
+3,Cachorro-Quente Especial,15.00,"Pão, salsicha, queijo, bacon, milho, ervilha, batata palha.",img/cachorro-quente-maneiras-de-preparar.jpg,Lanches
+4,Cachorro-Quente Vegano,12.00,"Pão integral, salsicha vegetal, molho de tomate, batata palha.",img/images.jfif,Lanches
+5,Suco Natural,7.00,Suco de laranja ou limão 300ml.,img/1400x919-smoothie-peel-tea-Recipe-b30560c7-ab17-4a7c-910c-9afc9fbdab1a-0-1400x919.jpg,Bebidas
+6,Batata Frita,8.00,Porção individual de batata frita crocante.,img/batata-frita-sequinha.avif,Porções
+7,Combo Família,40.00,3 Cachorros-quentes Tradicionais + 3 Refrigerantes Lata.,img/dogcerto.jpg,Lanches
+8,Água Mineral,3.00,500ml sem gás.,img/como-e-feito-o-envase-de-agua-mineral.jpg,Bebidas

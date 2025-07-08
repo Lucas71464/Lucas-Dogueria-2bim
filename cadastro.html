@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogueria Winchester - Cadastro</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+<body id="cadastro-page">
+    <header>
+        <div class="logo">Dogueria Winchester</div>
+        <nav>
+            <button onclick="window.location.href='index.html'">Página Inicial</button>
+            <button onclick="window.location.href='cardapio.html'">Cardápio</button>
+            <button onclick="window.location.href='login.html'">Login</button>
+        </nav>
+    </header>
+
+    <main class="login-main">
+        <div class="login-container">
+            <h2>Cadastre-se na Dogueria Winchester</h2>
+            <form id="registerForm">
+                <input type="text" id="registerUsername" placeholder="Usuário" required>
+                <div class="password-container">
+                    <input type="password" id="registerPassword" placeholder="Senha" required>
+                    <span class="toggle-password" onclick="togglePasswordVisibility('registerPassword')">👁️</span>
+                </div>
+                <div class="password-container">
+                    <input type="password" id="registerConfirmPassword" placeholder="Confirmar Senha" required>
+                    <span class="toggle-password" onclick="togglePasswordVisibility('registerConfirmPassword')">👁️</span>
+                </div>
+                <button type="submit">Cadastrar</button>
+                <p class="message" id="registerMessage"></p>
+            </form>
+            <p style="margin-top: 15px;">Já tem uma conta? <a href="login.html">Faça Login aqui</a></p>
+        </div>
+    </main>
+
+    <footer>
+    <p>&copy; 2025 Dogueria Winchester. Todos os direitos reservados.</p>
+  </footer>
+
+    <script type="module" src="js/cadastro.js"></script>
+</body>
+</html>

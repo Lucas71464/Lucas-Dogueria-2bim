@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gerenciar Produtos</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Dogueria Winchester</div>
+    <nav>
+      <button onclick="window.location.href='index.html'">Página Inicial</button>
+      <button onclick="window.location.href='cardapio.html'">Cardápio</button>
+      <button onclick="window.location.href='crud-usuarios.html'">Gerenciar Usuários</button>
+      <button id="logout-btn">Sair</button>
+    </nav>
+  </header>
+  <main>
+    <h2>Gerenciar Produtos</h2>
+    <div class="crud-container">
+      <div class="crud-col-esq">
+        <div id="produtos-crud-view"></div>
+      </div>
+      <div class="crud-col-dir">
+        <h3>Como funciona o gerenciamento de produtos?</h3>
+        <p><b>Adicionar:</b> Clique em "Adicionar Produto" e preencha todos os campos obrigatórios. Clique em "Salvar" para incluir o novo produto no cardápio.</p>
+        <p><b>Editar:</b> Clique em "Editar" ao lado do produto desejado, altere as informações e clique em "Salvar". Use "Cancelar" para desistir da edição.</p>
+        <p><b>Remover:</b> Clique em "Remover" ao lado do produto que deseja excluir. A remoção é imediata.</p>
+        <p>Todos os campos são obrigatórios. A seção do produto deve ser escolhida na lista. O preview da imagem aparece ao inserir a URL.</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Dogueria Winchester. Todos os direitos reservados.</p>
+  </footer>
+  <script type="module" src="js/controllers/ProdutoController.js"></script>
+  <script type="module" src="js/views/ProdutoView.js"></script>
+  <script type="module" src="js/services/ProdutoService.js"></script>
+  <script src="js/login-info.js"></script>
+  <script>
+    document.getElementById('logout-btn').onclick = function() {
+      sessionStorage.removeItem('currentUser');
+      window.location.href = 'login.html';
+    };
+  </script>
+</body>
+</html>
